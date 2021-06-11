@@ -21,3 +21,5 @@ time.sleep(3)
 
 print()
 print("Je hebt 5 levens bij elke fout geraden letter gaat er een leven af")
+
+print("Het woord heeft" + str(lengtewoord) + "letters")
