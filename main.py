@@ -10,8 +10,8 @@ print("Hallo " + name + "!")
 counter = 0
 woordenlijst = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk" ]
 
-hetwoord = random.choice(woordenlijst)
-lengtewoord = len(hetwoord)
+woordkeuze = random.choice(woordenlijst)
+lengtewoord = len(woordkeuze)
 temp = "." * lengtewoord
 
 print("We gaan vandaag galgje spelen")
@@ -33,4 +33,8 @@ time.sleep(2)
 
 print("Het woord heeft " + str(lengtewoord) + " letters")
 
+while True:
+
+gok = (input(": "))
+match = re.search(gok,woordkeuze)
 
