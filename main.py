@@ -1,6 +1,6 @@
 import random
 import time
-
+import re
 
 
 print("Voer uw naam in alstublieft:")
@@ -34,7 +34,20 @@ time.sleep(2)
 print("Het woord heeft " + str(lengtewoord) + " letters")
 
 while True:
+  gokje = (input(": "))
+  match = re.search(gokje, woordkeuze)
+  if gokje == woordkeuze: 
+    print('Goed gedaan! Je heb het woord ' + '"' + woordkeuze + '"' + " geraden")
+    print("Dit is het einde van het spel. Klik op 'Run' om het spel nogmaals te spelen!")
+    break
 
-gok = (input(": "))
-match = re.search(gok,woordkeuze)
+ elif match: 
+    print("Goed gedaan! raad verder.")
+    for i in range(0, lengtewoord):
+      if gokje == woordkeuze[i]:
+        temp = temp[:i] + gokje +temp[i+1:]
+    print(temp)
+
+
+
 
